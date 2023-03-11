@@ -4,6 +4,24 @@ if not telescope_setup then
 	return
 end
 
+-- set custom username for prompt
+local custom_username = "777"
+
+local function get_username()
+	local username = os.getenv("USER")
+	if username == nil then
+		return "777"
+	end
+	return username
+end
+
+local function my_username()
+	if custom_username == nil or custom_username == "" then
+		return " " .. get_username() .. " ▶ "
+	end
+	return " " .. custom_username .. " ▶ "
+end
+
 -- import telescope actions safely
 local actions_setup, actions = pcall(require, "telescope.actions")
 if not actions_setup then
@@ -68,7 +86,7 @@ telescope.setup({
 				preview_height = 130,
 			},
 		},
-		prompt_prefix = " 777 >> ",
+		prompt_prefix = my_username(),
 		set_env = { ["COLORTERM"] = "truecolor" },
 		vimgrep_arguments = {
 			"rg",
