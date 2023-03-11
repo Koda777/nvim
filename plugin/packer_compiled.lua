@@ -288,7 +288,7 @@ _G.packer_plugins = {
     url = "https://github.com/rmagatti/session-lens"
   },
   ["styler.nvim"] = {
-    config = { "\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\16colorscheme\21catppuccin-mocha\15background\tdark\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0" },
+    config = { "\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\15background\tdark\16colorscheme\21catppuccin-mocha\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0" },
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/styler.nvim",
     url = "https://github.com/folke/styler.nvim"
@@ -341,14 +341,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
--- Config for: styler.nvim
-time([[Config for styler.nvim]], true)
-try_loadstring("\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\16colorscheme\21catppuccin-mocha\15background\tdark\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0", "config", "styler.nvim")
-time([[Config for styler.nvim]], false)
 -- Config for: heirline.nvim
 time([[Config for heirline.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rheirline\frequire\0", "config", "heirline.nvim")
 time([[Config for heirline.nvim]], false)
+-- Config for: styler.nvim
+time([[Config for styler.nvim]], true)
+try_loadstring("\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\15background\tdark\16colorscheme\21catppuccin-mocha\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0", "config", "styler.nvim")
+time([[Config for styler.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

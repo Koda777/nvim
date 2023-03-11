@@ -1,8 +1,8 @@
 local options = {
 	relativenumber = true,
 	number = true,
-	tabstop = 4, -- set 4 spaces for a tab (prettier default)
-	shiftwidth = 4, -- set 4 spaces for indent width
+	tabstop = 2, -- set 4 spaces for a tab (prettier default)
+	shiftwidth = 2, -- set 4 spaces for indent width
 	expandtab = true, -- convert tab to spaces
 	autoindent = true, -- copy indent from current line when starting new one
 	mouse = "",
@@ -16,7 +16,7 @@ local options = {
 	smartcase = true, -- if you include mixed case in your search, assumes you want case-sensitive
 	undofile = true, -- enable persistent undo
 	-- cursor line
-	-- cursorline = true, -- highlight the current cursor line
+	cursorline = true, -- highlight the current cursor line
 	-- turn on termguicolors for nightfly colorscheme to work
 	-- (have to use iterm2 or any other true color terminal)
 	termguicolors = true,

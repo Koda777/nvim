@@ -142,6 +142,7 @@ return packer.startup(function(use)
 	use("rmagatti/auto-session")
 	use("rmagatti/session-lens")
 	use("bluz71/vim-nightfly-colors")
+	use("weirongxu/plantuml-previewer.vim")
 	use("numToStr/Comment.nvim")
 	use({
 		"folke/todo-comments.nvim",
