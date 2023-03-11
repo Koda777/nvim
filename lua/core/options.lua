@@ -34,7 +34,7 @@ local options = {
 	splitright = true, -- split vertical window to the right
 	splitbelow = true, -- split horizontal window to the bottom
 }
--- on
+
 vim.cmd("set nocursorline")
 vim.cmd("set lazyredraw")
 
@@ -42,11 +42,13 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- vim.fillchars:append({ eob = " " })
 vim.o.shell = "/bin/zsh"
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set iskeyword+=_]])
 
+-- delete wave sign in nvim
+vim.cmd("set fillchars+=eob:\\ ")
+
 -- disable netrw
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1

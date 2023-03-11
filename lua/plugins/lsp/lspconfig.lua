@@ -46,6 +46,12 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = cmp_nvim_lsp.default_capabilities()
+capabilities.textDocument = capabilities.textDocument or {}
+capabilities.textDocument.completion = capabilities.textDocument.completion or {}
+capabilities.textDocument.completion.completionItem = capabilities.textDocument.completion.completionItem or {}
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.offsetEncoding = { "utf-8", "utf-16", "utf-32" }
+
 local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
@@ -89,9 +95,8 @@ lspconfig["emmet_ls"].setup({
 lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
-	settings = { -- custom settings for lua
+	settings = {
 		Lua = {
-			-- make the language server recognize "vim" global
 			diagnostics = {
 				globals = { "vim" },
 			},

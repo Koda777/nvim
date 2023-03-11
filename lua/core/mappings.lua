@@ -6,6 +6,7 @@ vim.g.mapleader = " "
 
 -- Change Esc in insert mode
 keymap("i", "jk", "<Esc>", opts)
+keymap("v", "fd", "<Esc>", opts)
 
 -- Save file
 keymap("n", "<leader>w", ":w<CR>", opts)
@@ -109,3 +110,6 @@ keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gd", ":Gvdiff<CR>", opts)
 keymap("n", "<leader>gc", ":Git commit<CR>", opts)
 keymap("n", "<leader>gp", ":Git push<CR>", opts)
+
+-- Redo
+vim.api.nvim_set_keymap("n", "<C-r>", "<Cmd>redo<CR>", opts)

@@ -52,8 +52,8 @@ telescope.setup({
 			cursorline = true,
 			number = true,
 			relativenumber = true,
-			width = 105,
-			height = 80,
+			width = 100,
+			height = 130,
 			wrap = false,
 		},
 		previewer = false,
@@ -63,9 +63,9 @@ telescope.setup({
 				prompt_position = "bottom",
 				preview_cutoff = 120,
 				width_padding = 0.1,
-				height = 0.3,
-				preview_width = 0,
-				preview_height = 0,
+				height = 0.6,
+				preview_width = 100,
+				preview_height = 130,
 			},
 		},
 		prompt_prefix = " 777 >> ",
@@ -81,6 +81,7 @@ telescope.setup({
 		},
 	},
 })
+
 telescope.load_extension("fzf")
 telescope.load_extension("git_worktree")
 telescope.load_extension("session-lens")

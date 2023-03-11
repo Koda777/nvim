@@ -4,9 +4,11 @@ packer.init({
 	opt_defautl = true,
 	display = {
 		open_fn = function()
-			return require("packer.util").float({ border = "rounded" })
+			return require("packer.util").float({
+				border = "single",
+			})
 		end,
-		prompt_border = "rounded", -- Border style of prompt popups.
+		prompt_border = "rounded",
 	},
 })
 
@@ -102,7 +104,6 @@ return packer.startup(function(use)
 	use("Everblush/everblush.nvim")
 	use("rhysd/clever-f.vim")
 	use("frazrepo/vim-rainbow")
-	--	use("Nero-F/vim-tek-header")
 	use({
 		"rebelot/heirline.nvim",
 		config = function()
@@ -111,7 +112,10 @@ return packer.startup(function(use)
 	})
 	use("rcarriga/nvim-notify")
 	use("yorik1984/lualine-theme.nvim")
-	use({ "glepnir/dashboard-nvim" })
+	use({
+		"glepnir/dashboard-nvim",
+		requires = { "nvim-tree/nvim-web-devicons" },
+	})
 	use("nvim-tree/nvim-web-devicons")
 	use("tyru/open-browser.vim")
 	use("aklt/plantuml-syntax")
@@ -134,16 +138,16 @@ return packer.startup(function(use)
 	use("tersetears/maani.nvim")
 	use("aswathkk/DarkScene.vim")
 	use("numToStr/FTerm.nvim")
-	use("RRethy/vim-illuminate")
+	use("ThePrimeagen/git-worktree.nvim")
+	use("rmagatti/auto-session")
+	use("rmagatti/session-lens")
+	use("bluz71/vim-nightfly-colors")
+	use("numToStr/Comment.nvim")
 	use({
 		"folke/todo-comments.nvim",
 		requires = "nvim-lua/plenary.nvim",
 		config = function()
-			require("todo-comments").setup({
-				-- your configuration comes here
-				-- or leave it empty to use the default settings
-				-- refer to the configuration section below
-			})
+			require("todo-comments").setup({})
 		end,
 	})
 	if packer_bootstrap then
