@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 -- Define leader key
 vim.g.mapleader = " "
 
+-- Change ; to : in normal node
+vim.api.nvim_set_keymap("n", ";", ":", { noremap = true, silent = true })
+
 -- Change Esc in insert mode
 keymap("i", "jk", "<Esc>", opts)
 keymap("v", "fd", "<Esc>", opts)
@@ -113,3 +116,13 @@ keymap("n", "<leader>gp", ":Git push<CR>", opts)
 
 -- Redo
 vim.api.nvim_set_keymap("n", "<C-r>", "<Cmd>redo<CR>", opts)
+
+-- motion
+keymap("n", "<C-[>", "{", opts)
+keymap("v", "<C-[>", "{", opts)
+keymap("n", "<C-]>", "}", opts)
+keymap("v", "<C-]>", "}", opts)
+keymap("n", "<C-g>", "G", opts)
+
+-- Delete and insert
+keymap("n", "<C-c>", "C", opts)
