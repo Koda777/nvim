@@ -38,6 +38,9 @@ local options = {
 vim.cmd("set nocursorline")
 vim.cmd("set lazyredraw")
 
+-- set color top bar
+vim.cmd("hi TabLineFill term=bold cterm=bold ctermbg=0")
+
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
