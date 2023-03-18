@@ -1,6 +1,10 @@
 local api = vim.api
 local keymap = vim.keymap
-local dashboard = require("dashboard")
+
+local ok, dashboard = pcall(require, "dashboard")
+if not ok then
+	return
+end
 
 dashboard.custom_header = {
 	"    ⢰⣧⣼⣯⠄⣸⣠⣶⣶⣦⣾⠄⠄⠄⠄⡀⠄⢀⣿⣿⠄⠄⠄⢸⡇⠄⠄ ",

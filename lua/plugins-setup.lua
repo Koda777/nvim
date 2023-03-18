@@ -45,12 +45,7 @@ return packer.startup(function(use)
 	-- packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
-
-	-- commenting with gc
-	use("numToStr/Comment.nvim")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -112,10 +107,6 @@ return packer.startup(function(use)
 	})
 	use("rcarriga/nvim-notify")
 	use("yorik1984/lualine-theme.nvim")
-	use({
-		"glepnir/dashboard-nvim",
-		requires = { "nvim-tree/nvim-web-devicons" },
-	})
 	use("nvim-tree/nvim-web-devicons")
 	use("tyru/open-browser.vim")
 	use("aklt/plantuml-syntax")
@@ -142,15 +133,23 @@ return packer.startup(function(use)
 	use("rmagatti/auto-session")
 	use("rmagatti/session-lens")
 	use("bluz71/vim-nightfly-colors")
-	use("weirongxu/plantuml-previewer.vim")
 	use("numToStr/Comment.nvim")
+	-- use("/Users/alexandre/Project/plugins_nvim/ColorTab")
 	use({
 		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup({})
 		end,
 	})
+use {
+  'glepnir/dashboard-nvim',
+  event = 'VimEnter'}
+	use("neovim/nvim-lspconfig")
+	use("simrat39/rust-tools.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	-- Debugging
+	use("nvim-lua/plenary.nvim")
+	use("mfussenegger/nvim-dap")
 	if packer_bootstrap then
 		require("packer").sync()
 	end

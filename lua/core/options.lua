@@ -55,3 +55,7 @@ vim.cmd("set fillchars+=eob:\\ ")
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+vim.api.nvim_command('let &t_SI = "e[5 q"') -- curseur en insertion
+vim.api.nvim_command('let &t_SR = "e[4 q"') -- curseur en remplacement
+vim.api.nvim_command('let &t_EI = "e[1 q"') -- curseur normal

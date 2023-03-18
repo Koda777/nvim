@@ -1,6 +1,7 @@
-require("plugins.dashboard")
+-- require("plugins.dashboard")
 require("plugins.copilot")
 require("plugins.harpoon")
+require("plugins.indent_blankline")
 require("plugins.comments")
 require("plugins.lualine")
 require("plugins.illuminate")
