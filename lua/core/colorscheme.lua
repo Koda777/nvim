@@ -1,4 +1,4 @@
-vim.cmd("colorscheme nightfly")
+vim.cmd("colorscheme moonfly")
 
 local g = vim.g
 

@@ -1,4 +1,4 @@
-packer = require("packer")
+local packer = require("packer")
 
 packer.init({
 	opt_defautl = true,
@@ -133,6 +133,7 @@ return packer.startup(function(use)
 	use("rmagatti/auto-session")
 	use("rmagatti/session-lens")
 	use("bluz71/vim-nightfly-colors")
+	use("bluz71/vim-moonfly-colors")
 	use("numToStr/Comment.nvim")
 	-- use("/Users/alexandre/Project/plugins_nvim/ColorTab")
 	use({
@@ -141,12 +142,13 @@ return packer.startup(function(use)
 			require("todo-comments").setup({})
 		end,
 	})
-use {
-  'glepnir/dashboard-nvim',
-  event = 'VimEnter'}
-	use("neovim/nvim-lspconfig")
+	use({
+		"glepnir/dashboard-nvim",
+		event = "VimEnter",
+	})
 	use("simrat39/rust-tools.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
+	use("xiyaowong/transparent.nvim")
 	-- Debugging
 	use("nvim-lua/plenary.nvim")
 	use("mfussenegger/nvim-dap")

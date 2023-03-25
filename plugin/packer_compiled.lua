@@ -130,8 +130,10 @@ _G.packer_plugins = {
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
-    loaded = true,
-    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/opt/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
   ["everblush.nvim"] = {
@@ -164,6 +166,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/heirline.nvim",
     url = "https://github.com/rebelot/heirline.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -230,6 +237,11 @@ _G.packer_plugins = {
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -282,13 +294,18 @@ _G.packer_plugins = {
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rust-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/rust-tools.nvim",
+    url = "https://github.com/simrat39/rust-tools.nvim"
+  },
   ["session-lens"] = {
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/session-lens",
     url = "https://github.com/rmagatti/session-lens"
   },
   ["styler.nvim"] = {
-    config = { "\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\15background\tdark\16colorscheme\21catppuccin-mocha\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0" },
+    config = { "\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\16colorscheme\21catppuccin-mocha\15background\tdark\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0" },
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/styler.nvim",
     url = "https://github.com/folke/styler.nvim"
@@ -309,10 +326,20 @@ _G.packer_plugins = {
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   ["typescript.nvim"] = {
     loaded = true,
     path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/typescript.nvim",
     url = "https://github.com/jose-elias-alvarez/typescript.nvim"
+  },
+  ["vim-moonfly-colors"] = {
+    loaded = true,
+    path = "/Users/alexandre/.local/share/nvim/site/pack/packer/start/vim-moonfly-colors",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
   },
   ["vim-nightfly-colors"] = {
     loaded = true,
@@ -337,6 +364,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: styler.nvim
+time([[Config for styler.nvim]], true)
+try_loadstring("\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\16colorscheme\21catppuccin-mocha\15background\tdark\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0", "config", "styler.nvim")
+time([[Config for styler.nvim]], false)
 -- Config for: todo-comments.nvim
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
@@ -345,15 +376,18 @@ time([[Config for todo-comments.nvim]], false)
 time([[Config for heirline.nvim]], true)
 try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rheirline\frequire\0", "config", "heirline.nvim")
 time([[Config for heirline.nvim]], false)
--- Config for: styler.nvim
-time([[Config for styler.nvim]], true)
-try_loadstring("\27LJ\2\n²\1\0\0\5\0\n\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\b\0005\3\4\0005\4\3\0=\4\5\0035\4\6\0=\4\a\3=\3\t\2B\0\2\1K\0\1\0\vthemes\1\0\0\thelp\1\0\2\15background\tdark\16colorscheme\21catppuccin-mocha\rmarkdown\1\0\0\1\0\1\16colorscheme\fgruvbox\nsetup\vstyler\frequire\0", "config", "styler.nvim")
-time([[Config for styler.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'dashboard-nvim'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
