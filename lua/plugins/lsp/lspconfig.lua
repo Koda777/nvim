@@ -87,6 +87,9 @@ lspconfig["tailwindcss"].setup({
 
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
+	init_options = {
+		offsetEncoding = "utf-8",
+	},
 	on_attach = on_attach,
 })
 
