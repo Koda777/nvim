@@ -113,17 +113,6 @@ return packer.startup(function(use)
 	use("weirongxu/plantuml-previewer.vim")
 	use("ThePrimeagen/harpoon")
 	use("rockerBOO/boo-colorscheme-nvim")
-	use({
-		"folke/styler.nvim",
-		config = function()
-			require("styler").setup({
-				themes = {
-					markdown = { colorscheme = "gruvbox" },
-					help = { colorscheme = "catppuccin-mocha", background = "dark" },
-				},
-			})
-		end,
-	})
 	use("heraldofsolace/nisha-vim")
 	use("rktjmp/lush.nvim")
 	use("tersetears/maani.nvim")
@@ -149,6 +138,7 @@ return packer.startup(function(use)
 	use("simrat39/rust-tools.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("xiyaowong/transparent.nvim")
+	use("vim-scripts/DoxygenToolkit.vim")
 	-- Debugging
 	use("nvim-lua/plenary.nvim")
 	use("mfussenegger/nvim-dap")
