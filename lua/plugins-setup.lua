@@ -135,7 +135,6 @@ return packer.startup(function(use)
 		"glepnir/dashboard-nvim",
 		event = "VimEnter",
 	})
-	use("simrat39/rust-tools.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("xiyaowong/transparent.nvim")
 	use("vim-scripts/DoxygenToolkit.vim")
