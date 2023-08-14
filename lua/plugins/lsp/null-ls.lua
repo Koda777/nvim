@@ -1,4 +1,3 @@
--- import null-ls plugin safely
 local setup, null_ls = pcall(require, "null-ls")
 if not setup then
 	return
@@ -20,6 +19,8 @@ null_ls.setup({
 		formatting.prettier, -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		formatting.clang_format, --c/c++ format
+		-- formatting.black, -- python format
+		-- formatting.isort, -- python import sort
 		formatting.rustfmt, -- rust format
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)

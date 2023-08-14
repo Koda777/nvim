@@ -21,6 +21,7 @@ mason_lspconfig.setup({
 		"html",
 		"cssls",
 		"tailwindcss",
+		"pyright",
 		"lua_ls",
 		"clangd",
 		"emmet_ls",
@@ -32,6 +33,8 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
+		"black",
+		"isort",
 		"eslint_d", -- ts/js linter
 		"clangd-format", -- c/c++ formatter
 	},

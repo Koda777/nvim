@@ -4,8 +4,8 @@ if impatient_ok then
 	impatient.enable_profile()
 end
 for _, source in ipairs({
+	"lazy-setup",
 	"plugins",
-	"plugins-setup",
 	"core.colorscheme",
 	"core.mappings",
 	"core.options",

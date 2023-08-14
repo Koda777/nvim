@@ -1,3 +1,5 @@
+require("telescope").load_extension("media_files")
+
 -- import telescope plugin safely
 local telescope_setup, telescope = pcall(require, "telescope")
 if not telescope_setup then
@@ -9,6 +11,7 @@ local custom_username = "777"
 
 local function get_username()
 	local username = os.getenv("USER")
+
 	if username == nil then
 		return "777"
 	end
@@ -29,8 +32,23 @@ if not actions_setup then
 end
 
 telescope.setup({
+	extensions = {
+		media_files = {
+			filetypes = { "png", "webp", "jpg", "jpeg" },
+			find_cmd = "rg",
+		},
+	},
 	defaults = {
-		prompt_position = "top",
+		vimgrep_arguments = {
+			"rg",
+			"--color=never",
+			"--no-heading",
+			"--with-filename",
+			"--line-number",
+			"--column",
+			"--smart-case",
+		},
+		prompt_position = "bottom",
 		sorting_strategy = "ascending",
 		layout_strategy = "horizontal",
 		preview_cutoff = 5,
@@ -70,8 +88,8 @@ telescope.setup({
 			cursorline = true,
 			number = true,
 			relativenumber = true,
-			width = 100,
-			height = 130,
+			width = 300,
+			height = 170,
 			wrap = false,
 		},
 		previewer = false,
@@ -81,26 +99,58 @@ telescope.setup({
 				prompt_position = "bottom",
 				preview_cutoff = 120,
 				width_padding = 0.1,
-				height = 0.6,
-				preview_width = 100,
+				height = 0.8,
+				preview_width = 70,
 				preview_height = 130,
+			},
+		},
+
+		pickers = {
+
+			live_grep = {
+				theme = "dropdown",
+			},
+			grep_string = {
+				theme = "dropdown",
+			},
+			find_files = {
+				theme = "dropdown",
+				previewer = false,
+			},
+			buffers = {
+				theme = "dropdown",
+				previewer = false,
+				initial_mode = "normal",
+			},
+			planets = {
+				show_pluto = true,
+				show_moon = true,
+			},
+			colorscheme = {
+				-- enable_preview = true,
+			},
+			lsp_references = {
+				theme = "dropdown",
+				initial_mode = "normal",
+			},
+			lsp_definitions = {
+				theme = "dropdown",
+				initial_mode = "normal",
+			},
+			lsp_declarations = {
+				theme = "dropdown",
+				initial_mode = "normal",
+			},
+			lsp_implementations = {
+				theme = "dropdown",
+				initial_mode = "normal",
 			},
 		},
 		prompt_prefix = my_username(),
 		set_env = { ["COLORTERM"] = "truecolor" },
-		vimgrep_arguments = {
-			"rg",
-			"--color=never",
-			"--no-heading",
-			"--with-filename",
-			"--line-number",
-			"--column",
-			"--smart-case",
-		},
 	},
 })
 
 telescope.load_extension("fzf")
 telescope.load_extension("git_worktree")
 telescope.load_extension("session-lens")
-telescope.load_extension("fzf")

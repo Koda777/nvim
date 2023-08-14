@@ -1,7 +1,4 @@
-vim.cmd("colorscheme moonfly")
+-- vim.cmd("colorscheme catppuccin-mocha")
+vim.cmd("colorscheme gruvbox")
 
-local g = vim.g
-
-g.nightflyCursorColor = true
-g.nightflyVirtualTextColor = true
-g.nightflyNormalFloat = true
+vim.o.termguicolors = true
