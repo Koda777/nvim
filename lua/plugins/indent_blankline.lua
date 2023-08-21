@@ -7,3 +7,6 @@ require("indent_blankline").setup({
 	space_char_blankline = " ",
 	show_current_context_start = true,
 })
+
+vim.g.indent_blankline_filetype_exclude = { "alpha" }
+vim.g.indent_blankline_buftype_exclude = { "terminal", "dashboard" }

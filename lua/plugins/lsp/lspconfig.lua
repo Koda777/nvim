@@ -52,10 +52,11 @@ capabilities.textDocument.completion.completionItem = capabilities.textDocument.
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities.offsetEncoding = { "utf-8", "utf-16", "utf-32" }
 
-local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+local signs = { Hint = "🎯", Warn = " ", Error = "🌐", Info = " " }
+
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
-	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
 lspconfig["html"].setup({

@@ -1,2 +1,4 @@
 pack
 lazy-lock.json
+lua/Session.vim
+github/*

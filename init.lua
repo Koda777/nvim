@@ -9,6 +9,8 @@ for _, source in ipairs({
 	"core.colorscheme",
 	"core.mappings",
 	"core.options",
+	"core.registers",
+	"core.diagnostics",
 }) do
 	local status_ok, fault = pcall(require, source)
 	if not status_ok then

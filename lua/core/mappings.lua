@@ -4,9 +4,6 @@ local opts = { noremap = true, silent = true }
 -- Define leader key
 vim.g.mapleader = " "
 
--- Change ; to : in normal node
-vim.api.nvim_set_keymap("n", ";", ":", { noremap = true, silent = true })
-
 -- Change Esc in insert mode
 keymap("i", "jk", "<Esc>", opts)
 keymap("v", "fd", "<Esc>", opts)
@@ -126,3 +123,12 @@ keymap("n", "<C-g>", "G", opts)
 
 -- Delete and insert
 keymap("n", "<C-c>", "C", opts)
+
+-- Mini Files Explorer
+keymap("n", "<leader>f", ":lua MiniFiles.open()<CR>", opts)
+
+-- one at a time in the floating window)
+vim.api.nvim_set_keymap("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
+-- Go to prev diagnostic (if there are multiple on the same line, only shows
+-- one at a time in the floating window)
+vim.api.nvim_set_keymap("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
