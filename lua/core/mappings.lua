@@ -12,7 +12,7 @@ keymap("v", "fd", "<Esc>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Close buffer
-keymap("n", "<leader>q", ":wa<CR> :qall!<CR>", opts)
+keymap("n", "<leader>q", ":wqall!<CR>", opts)
 
 -- Use Ctrl+v to paste
 keymap("n", "<C-v>", "p", opts)

@@ -1,24 +1,31 @@
--- require("plugins.dashboard")
-require("plugins.wilder")
-require("plugins.catppucin")
-require("plugins.alpha")
-require("plugins.mini")
-require("plugins.lsp-colors")
-require("plugins.yank")
-require("plugins.kanagawa")
-require("plugins.copilot")
-require("plugins.harpoon")
-require("plugins.indent_blankline")
-require("plugins.comments")
-require("plugins.transparent")
-require("plugins.github_theme")
-require("plugins.lualine")
-require("plugins.illuminate")
-require("plugins.autopairs")
-require("plugins.lualine")
-require("plugins.telescope")
-require("plugins.nvim-cmp")
 require("plugins.treesitter")
--- Need to install plugin flutter before using this
--- require("plugins.flutter")
+
 require("plugins.lsp")
+
+local sources = {
+	"plugins.alpha",
+	"plugins.autopairs", -- ?
+	"plugins.catppucin", -- ?
+	"plugins.comments",
+	"plugins.indent_blankline",
+	"plugins.harpoon",
+	"plugins.lualine",
+	"plugins.copilot",
+	"plugins.mini",
+	"plugins.wilder", -- ?
+	"plugins.lsp-colors", -- ?
+	"plugins.transparent",
+	"plugins.nvim-cmp",
+	"plugins.telescope",
+	"plugins.treesitter",
+	"plugins.colorschemes.kanagawa",
+}
+
+for _, source in ipairs(sources) do
+	local status_ok, module = pcall(require, source)
+	if status_ok then
+		module.config()
+	else
+		vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. module)
+	end
+end

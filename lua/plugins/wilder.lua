@@ -1,41 +1,47 @@
-local wilder = require("wilder")
+local M = {}
 
-wilder.setup({ modes = { ":", "/", "?" } })
--- Disable Python remote plugin
-wilder.set_option("use_python_remote_plugin", 0)
+function M.config()
+	local wilder = require("wilder")
 
-wilder.set_option("pipeline", {
-	wilder.branch(
-		wilder.cmdline_pipeline({
-			fuzzy = 1,
-			set_pcre2_pattern = 1,
-		}),
-		wilder.python_search_pipeline({
-			pattern = "fuzzy",
-		})
-	),
-})
+	wilder.setup({ modes = { ":", "/", "?" } })
+	-- Disable Python remote plugin
+	wilder.set_option("use_python_remote_plugin", 0)
 
-local highlighters = {
-	wilder.pcre2_highlighter(),
-	wilder.basic_highlighter(),
-}
-wilder.set_option(
-	"renderer",
-	wilder.renderer_mux({
-		[":"] = wilder.popupmenu_renderer({
-			highlighter = wilder.basic_highlighter(),
-			left = {
-				"❄️ ",
-				wilder.popupmenu_devicons(),
-			},
-			right = {
-				" ",
-				wilder.popupmenu_scrollbar(),
-			},
-		}),
-		["/"] = wilder.wildmenu_renderer({
-			highlighter = wilder.basic_highlighter(),
-		}),
+	wilder.set_option("pipeline", {
+		wilder.branch(
+			wilder.cmdline_pipeline({
+				fuzzy = 1,
+				set_pcre2_pattern = 1,
+			}),
+			wilder.python_search_pipeline({
+				pattern = "fuzzy",
+			})
+		),
 	})
-)
+
+	local highlighters = {
+		wilder.pcre2_highlighter(),
+		wilder.basic_highlighter(),
+	}
+	wilder.set_option(
+		"renderer",
+		wilder.renderer_mux({
+			[":"] = wilder.popupmenu_renderer({
+				highlighter = wilder.basic_highlighter(),
+				left = {
+					"❄️ ",
+					wilder.popupmenu_devicons(),
+				},
+				right = {
+					" ",
+					wilder.popupmenu_scrollbar(),
+				},
+			}),
+			["/"] = wilder.wildmenu_renderer({
+				highlighter = wilder.basic_highlighter(),
+			}),
+		})
+	)
+end
+
+return M
