@@ -3,7 +3,7 @@ local M = {}
 function M.config()
 	local wilder = require("wilder")
 
-	wilder.setup({ modes = { ":", "/", "?" } })
+	wilder.setup({ modes = { ":", "?" } })
 	-- Disable Python remote plugin
 	wilder.set_option("use_python_remote_plugin", 0)
 
