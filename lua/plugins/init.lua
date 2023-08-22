@@ -1,31 +1,43 @@
-require("plugins.treesitter")
-
-require("plugins.lsp")
-
 local sources = {
-	"plugins.alpha",
-	"plugins.autopairs", -- ?
-	"plugins.catppucin", -- ?
-	"plugins.comments",
-	"plugins.indent_blankline",
-	"plugins.harpoon",
-	"plugins.lualine",
-	"plugins.copilot",
-	"plugins.mini",
-	"plugins.wilder", -- ?
-	"plugins.lsp-colors", -- ?
-	"plugins.transparent",
-	"plugins.nvim-cmp",
-	"plugins.telescope",
-	"plugins.treesitter",
-	"plugins.colorschemes.kanagawa",
+	"alpha",
+	"autopairs", -- ?
+	"catppucin", -- ?
+	"comments",
+	"indent_blankline",
+	"harpoon",
+	"rust-tools",
+	"lualine",
+	"copilot",
+	"mini",
+	"wilder", -- ?
+	"lsp-colors", -- ?
+	"transparent",
+	"nvim-cmp",
+	"telescope",
+	"treesitter",
+	"colorschemes.kanagawa",
+}
+
+local colorschemes = {
+	"kanagawa",
 }
 
 for _, source in ipairs(sources) do
-	local status_ok, module = pcall(require, source)
+	local currentName = "plugins." .. source
+	local status_ok, module = pcall(require, currentName)
 	if status_ok then
 		module.config()
 	else
-		vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. module)
+		vim.api.nvim_err_writeln("Failed to load " .. currentName .. "\n\n" .. module)
+	end
+end
+
+for _, source in ipairs(colorschemes) do
+	local currentName = "plugins.colorschemes." .. source
+	local status_ok, module = pcall(require, currentName)
+	if status_ok then
+		module.config()
+	else
+		vim.api.nvim_err_writeln("Failed to load " .. currentName .. "\n\n" .. module)
 	end
 end

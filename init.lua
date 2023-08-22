@@ -6,6 +6,7 @@ end
 for _, source in ipairs({
 	"lazy-setup",
 	"plugins",
+	"plugins.lsp",
 	"core.colorscheme",
 	"core.mappings",
 	"core.options",
