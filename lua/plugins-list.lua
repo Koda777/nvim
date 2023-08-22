@@ -8,7 +8,7 @@ return {
 	"folke/lsp-colors.nvim",
 	"folke/neodev.nvim",
 	"gelguy/wilder.nvim",
-	"github/copilot.vim",
+	{ "github/copilot.vim", lazy = false },
 	"bluz71/vim-nightfly-guicolors",
 	"nvim-lualine/lualine.nvim",
 	"junegunn/fzf.vim",
