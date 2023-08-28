@@ -1,5 +1,6 @@
 return {
 	"folke/which-key.nvim",
+	"ThePrimeagen/vim-be-good",
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"startup-nvim/startup.nvim",
 	"nvim-telescope/telescope-media-files.nvim",
@@ -71,16 +72,6 @@ return {
 	"bluz71/vim-moonfly-colors",
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	"numToStr/Comment.nvim",
-	-- "akinsho/flutter-tools.nvim",
-	-- {
-	--"folke/todo-comments.nvim",
-	-- config = function()
-	-- require("todo-comments").setup({})
-	-- end,
-	-- },
-	-- {
-	-- event = "VimEnter",
-	-- },
 	"lukas-reineke/indent-blankline.nvim",
 	"vim-scripts/DoxygenToolkit.vim",
 	"EdenEast/nightfox.nvim",
@@ -91,8 +82,8 @@ return {
 	"averms/black-nvim",
 	"tiagovla/tokyodark.nvim",
 	"Nero-F/vim-tek-header",
+	{ "eddyekofo94/gruvbox-flat.nvim" },
 	{ "AlexvZyl/nordic.nvim" },
-	{ "morhetz/gruvbox" },
 	"shaunsingh/nord.nvim",
 	"projekt0n/github-nvim-theme",
 	"simrat39/rust-tools.nvim",

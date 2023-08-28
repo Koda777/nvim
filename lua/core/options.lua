@@ -50,7 +50,7 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.o.shell = "/bin/zsh"
+-- vim.o.shell = "/bin/zsh"
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set iskeyword+=_]])
 
@@ -68,3 +68,14 @@ vim.api.nvim_command('let &t_SR = "e[4 q"') -- curseur en remplacement
 vim.api.nvim_command('let &t_EI = "e[1 q"') -- curseur normal
 
 vim.o.updatetime = 300
+
+-- highlight function
+if vim.g.colors_name == "gruvbox-flat" then
+	vim.cmd("highlight Identifier guifg=#FDF0D5 ctermfg=Red")
+	vim.cmd("highlight Function guifg=#FDF0D5 ctermfg=Red")
+	vim.cmd("highlight! Constants guifg=Red ctermfg=Red")
+	vim.cmd("highlight CursorLineNr guifg=#FDF0D5 ctermfg=Red")
+elseif vim.g.colors_name == "nord" then
+	vim.cmd("highlight Identifier guifg=#FDF0D5 ctermfg=Red")
+	vim.cmd("highlight Function guifg=#FDF0D5 ctermfg=Red")
+end

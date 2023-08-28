@@ -10,6 +10,7 @@ keymap("v", "fd", "<Esc>", opts)
 
 -- Save file
 keymap("n", "<leader>w", ":w<CR>", opts)
+keymap("n", "<leader>g", ":close!<CR>", opts)
 
 -- Close buffer
 keymap("n", "<leader>q", ":wqall!<CR>", opts)
@@ -132,3 +133,7 @@ vim.api.nvim_set_keymap("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>",
 -- Go to prev diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
 vim.api.nvim_set_keymap("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
+
+-- Mapping test nvim plugins
+
+vim.api.nvim_set_keymap("n", "<leader>t", ":lua require('utils.menu').config()<CR>", { noremap = true, silent = true })

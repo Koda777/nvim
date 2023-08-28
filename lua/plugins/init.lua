@@ -1,3 +1,5 @@
+require("plugins.colorschemes.customize")
+
 local sources = {
 	"alpha",
 	"autopairs", -- ?
@@ -20,6 +22,8 @@ local sources = {
 
 local colorschemes = {
 	"kanagawa",
+	"gruvbox",
+	"nord",
 }
 
 for _, source in ipairs(sources) do
@@ -33,7 +37,7 @@ for _, source in ipairs(sources) do
 end
 
 for _, source in ipairs(colorschemes) do
-	local currentName = "plugins.colorschemes." .. source
+	local currentName = "plugins." .. "colorschemes." .. source
 	local status_ok, module = pcall(require, currentName)
 	if status_ok then
 		module.config()

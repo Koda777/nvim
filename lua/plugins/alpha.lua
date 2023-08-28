@@ -1,8 +1,16 @@
 local M = {}
 
 function M.config()
+	vim.cmd("highlight Function guifg=Red ctermfg=Red")
+
 	local status_ok, alpha = pcall(require, "alpha")
 	if not status_ok then
+		return
+	end
+
+	local status_ok, menu = pcall(require, "utils.menu")
+	if not status_ok then
+		print("error menu")
 		return
 	end
 
@@ -40,7 +48,7 @@ function M.config()
 		dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 		dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
 		-- dashboard.button("c", " " .. " Config", ":lcd ~/.config/nvim | edit init.lua <CR>"),
-		dashboard.button("c", " " .. " Config", ":lua ChangeDirectoryTmux() <CR>"),
+		-- dashboard.button("c", " " .. " Config", config_callback()),
 		dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 	}
 
