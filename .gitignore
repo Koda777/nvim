@@ -2,4 +2,4 @@ pack
 lazy-lock.json
 lua/Session.vim
 lua/sensational
-github/*
+github
