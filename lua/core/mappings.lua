@@ -135,4 +135,9 @@ vim.api.nvim_set_keymap("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>",
 vim.api.nvim_set_keymap("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 
 -- Mapping floaterm lazygit
--- vim.api.nvim_set_keymap("n", "<leader>lg", ":FloatermNew lazygit<CR>", opts)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>gg",
+	":FloatermNew --height=0.9 --width=0.9 --name=Lazygit --title=LazyGit lazygit<CR>",
+	opts
+)
