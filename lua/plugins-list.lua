@@ -92,4 +92,5 @@ return {
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	{ "goolord/alpha-nvim", dependencies = { { "nvim-tree/nvim-web-devicons" } } },
+	{ "dawsers/telescope-floaterm.nvim" },
 }

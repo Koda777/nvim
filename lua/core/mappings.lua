@@ -129,11 +129,10 @@ keymap("n", "<C-c>", "C", opts)
 keymap("n", "<leader>f", ":lua MiniFiles.open()<CR>", opts)
 
 -- one at a time in the floating window)
-vim.api.nvim_set_keymap("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>", opts)
 -- Go to prev diagnostic (if there are multiple on the same line, only shows
 -- one at a time in the floating window)
-vim.api.nvim_set_keymap("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", opts)
 
--- Mapping test nvim plugins
-
-vim.api.nvim_set_keymap("n", "<leader>t", ":lua require('utils.menu').config()<CR>", { noremap = true, silent = true })
+-- Mapping floaterm lazygit
+-- vim.api.nvim_set_keymap("n", "<leader>lg", ":FloatermNew lazygit<CR>", opts)

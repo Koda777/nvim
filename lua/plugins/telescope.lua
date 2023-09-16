@@ -153,10 +153,10 @@ function M.config()
 			set_env = { ["COLORTERM"] = "truecolor" },
 		},
 	})
-
 	telescope.load_extension("fzf")
 	telescope.load_extension("git_worktree")
 	telescope.load_extension("session-lens")
+	telescope.load_extension("floaterm")
 end
 
 return M
