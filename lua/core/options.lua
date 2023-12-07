@@ -41,7 +41,7 @@ vim.cmd("set nocursorline")
 vim.cmd("set lazyredraw")
 
 -- Set the tabstop to 4 spaces
-vim.cmd("autocmd FileType c,cpp,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4")
+-- vim.cmd("autocmd FileType c,cpp,rust setlocal tabstop=4 shiftwidth=4 softtabstop=4")
 
 -- set color top bar
 vim.cmd("hi TabLineFill term=bold cterm=bold ctermbg=0")
@@ -55,7 +55,7 @@ vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set iskeyword+=_]])
 
 -- delete wave sign in nvim
-vim.cmd("set fillchars+=eob:\\ ")
+-- vim.cmd("set fillchars+=eob:\\ ")
 
 -- disable netrw
 vim.g.loaded_netrw = 1

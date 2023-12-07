@@ -3,9 +3,9 @@ require("plugins.colorschemes.customize")
 local sources = {
 	"alpha",
 	"autopairs", -- ?
-	"catppucin", -- ?
+	-- "catppucin", -- ?
 	"comments",
-	"indent_blankline",
+	"cmdline",
 	"harpoon",
 	"rust-tools",
 	"lualine",
@@ -17,11 +17,14 @@ local sources = {
 	"nvim-cmp",
 	"telescope",
 	"treesitter",
+	"flutter-tools",
+	"wtf",
 	"colorschemes.kanagawa",
 }
 
 local colorschemes = {
 	"kanagawa",
+	"tokyonight",
 	"gruvbox",
 	"nord",
 }

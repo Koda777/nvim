@@ -7,14 +7,25 @@ function M.config()
 		return
 	end
 
-	-- configure treesitter
+	-- Function to check if the file type is ".dart"
+	-- Indent doesn't work with dart files
+	local function isDartFile()
+		local file_extension = vim.fn.expand("%:e")
+		print(file_extension)
+		if file_extension == "dart" then
+			return false
+		else
+			return true
+		end
+	end
+
 	treesitter.setup({
 		-- enable syntax highlighting
 		highlight = {
 			enable = true,
 		},
 		-- enable indentation
-		indent = { enable = true },
+		indent = { enable = false, disable = { "dart" } },
 		-- enable autotagging (w/ nvim-ts-autotag plugin)
 		autotag = { enable = true },
 		-- ensure these language parsers are installed

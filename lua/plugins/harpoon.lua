@@ -20,8 +20,8 @@ function M.config()
 			save_on_filetype_change = true,
 		},
 		menu = {
-			width = vim.api.nvim_win_get_width(0) - 55,
-			height = vim.api.nvim_win_get_height(0) - 35,
+			width = 40,
+			height = 10,
 		},
 	})
 end

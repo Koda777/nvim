@@ -1,9 +1,18 @@
 return {
 	"folke/which-key.nvim",
+	{ "akinsho/flutter-tools.nvim", lazy = false },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	"lukas-reineke/indent-blankline.nvim",
 	"ThePrimeagen/vim-be-good",
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"startup-nvim/startup.nvim",
 	"nvim-telescope/telescope-media-files.nvim",
+	{ "tyru/open-browser.vim", lazy = false },
 	"gbprod/yanky.nvim",
 	{ "echasnovski/mini.nvim", version = false },
 	"folke/lsp-colors.nvim",
@@ -21,8 +30,8 @@ return {
 	"rebelot/kanagawa.nvim",
 	"hrsh7th/cmp-buffer",
 	"hrsh7th/cmp-path",
-	"L3MON4D3/LuaSnip",
-	"saadparwaiz1/cmp_luasnip",
+	{ "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
+	{ "saadparwaiz1/cmp_luasnip", lazy = false },
 	"rafamadriz/friendly-snippets",
 	"fgheng/winbar.nvim",
 	"williamboman/mason.nvim",
@@ -57,8 +66,8 @@ return {
 	"yorik1984/lualine-theme.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"tyru/open-browser.vim",
-	"aklt/plantuml-syntax",
-	"weirongxu/plantuml-previewer.vim",
+	{ "aklt/plantuml-syntax", lazy = false },
+	{ "weirongxu/plantuml-previewer.vim", lazy = false },
 	"rockerBOO/boo-colorscheme-nvim",
 	"heraldofsolace/nisha-vim",
 	"rktjmp/lush.nvim",
@@ -72,7 +81,6 @@ return {
 	"bluz71/vim-moonfly-colors",
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	"numToStr/Comment.nvim",
-	"lukas-reineke/indent-blankline.nvim",
 	"vim-scripts/DoxygenToolkit.vim",
 	"EdenEast/nightfox.nvim",
 	"nvim-lua/plenary.nvim",
@@ -83,6 +91,12 @@ return {
 	"tiagovla/tokyodark.nvim",
 	"Nero-F/vim-tek-header",
 	{ "eddyekofo94/gruvbox-flat.nvim" },
+	{
+		"VonHeikemen/fine-cmdline.nvim",
+		dependencies = {
+			{ "MunifTanjim/nui.nvim" },
+		},
+	},
 	{ "AlexvZyl/nordic.nvim" },
 	"shaunsingh/nord.nvim",
 	"projekt0n/github-nvim-theme",
@@ -94,4 +108,29 @@ return {
 	{ "goolord/alpha-nvim", dependencies = { { "nvim-tree/nvim-web-devicons" } } },
 	{ "voldikss/vim-floaterm", lazy = false },
 	{ "dawsers/telescope-floaterm.nvim", lazy = false },
+	{
+		"piersolenski/wtf.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+		},
+		opts = {},
+		keys = {
+			{
+				"gw",
+				mode = { "n", "x" },
+				function()
+					require("wtf").ai()
+				end,
+				desc = "Debug diagnostic with AI",
+			},
+			{
+				mode = { "n" },
+				"gW",
+				function()
+					require("wtf").search()
+				end,
+				desc = "Search diagnostic with Google",
+			},
+		},
+	},
 }

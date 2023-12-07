@@ -37,6 +37,7 @@ mason_null_ls.setup({
 		"isort",
 		"eslint_d", -- ts/js linter
 		"clangd-format", -- c/c++ formatter
+		"dart",
 	},
 	automatic_installation = true,
 })

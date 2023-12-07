@@ -19,3 +19,8 @@ for _, source in ipairs({
 		error("Error loading " .. source .. "\n\n" .. fault)
 	end
 end
+
+local status_ok, sources = pcall(require, "./utils/registers")
+if not status_ok then
+	error("Error loading registers\n\n" .. sources)
+end

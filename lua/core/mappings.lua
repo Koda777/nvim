@@ -32,8 +32,9 @@ keymap("n", "<S-j>", ":BufferLineCyclePrev<CR>", opts)
 -- Harpoon
 keymap("n", "<leader>y", ':lua require("harpoon.ui").nav_file(1)<CR>', opts)
 keymap("n", "<leader>t", ':lua require("harpoon.ui").nav_file(2)<CR>', opts)
-keymap("n", "<leader>n", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
+keymap("n", "<leader>l", ':lua require("harpoon.ui").nav_file(3)<CR>', opts)
 keymap("n", "<leader>s", ':lua require("harpoon.ui").nav_file(4)<CR>', opts)
+
 keymap("n", "<leader>e", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', opts)
 keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', opts)
 
@@ -44,8 +45,6 @@ keymap("i", "<C-u>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
 
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
@@ -141,3 +140,5 @@ vim.api.nvim_set_keymap(
 	":FloatermNew --height=0.9 --width=0.9 --name=Lazygit --title=LazyGit lazygit<CR>",
 	opts
 )
+
+keymap("n", "<C-;>", "<cmd>FineCmdline<CR>", opts)

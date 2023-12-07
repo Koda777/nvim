@@ -1,4 +1,4 @@
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme tokyonight")
 -- vim.cmd("colorscheme gruvbox-flat")
 
 -- Set termguicolors
